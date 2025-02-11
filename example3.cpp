@@ -6,10 +6,10 @@ int main(int argc, char *argv[]) {
 
     // Criação do pipeline para rebaixar a taxa de amostragem
     GstElement *pipeline = gst_parse_launch(
-        "filesrc location=audio.wav ! decodebin ! "
+        "filesrc location=media/audio.wav ! decodebin ! "
         "audioconvert ! audioresample ! "
         "capsfilter caps=audio/x-raw,rate=16000 ! "
-        "wavenc ! filesink location=audio_output_gst.wav", 
+        "wavenc ! filesink location=media/audio_output_gst.wav", 
         NULL);
 
     if (!pipeline) {

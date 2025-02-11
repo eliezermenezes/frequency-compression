@@ -90,8 +90,8 @@ void process_audio(const char* input_file, const char* output_file, int filter_o
 
 int main() {
     // Configuração do filtro e do downsampling
-    const char* input_wav = "audio.wav";
-    const char* output_wav = "audio_output.wav";
+    const char* input_wav = "media/audio.wav";
+    const char* output_wav = "media/audio_output.wav";
     int filter_order = 31;        // Ordem do filtro FIR
     double cutoff_frequency = 4000.0; // Frequência de corte (Hz)
     int downsample_factor = 2;    // Fator de redução da taxa de amostragem
